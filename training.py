@@ -1,22 +1,17 @@
 # By Adam Diallo , April 7th 2020
-
 #%matplotlib inline
 #%config InlineBackend.figure_format = 'retina'
 
 import matplotlib.pyplot as plt
-import numpy as np
 import torch
 from torch import nn
 from torch import optim
-import load_split_train_test
-from torchvision import  models
+from torchvision import models
+from load_split_train_test import load_split_train_test
 
 # Images for training
 
 data_dir = 'C:\\Users\\adam_\\PycharmProjects\\PotpyTorch\\data\\plants'
-
-
-
 
 
 trainloader, testloader = load_split_train_test(data_dir, .2)
