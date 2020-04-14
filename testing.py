@@ -30,6 +30,7 @@ for ii in range(len(images)):
     sub = fig.add_subplot(1, len(images), ii + 1)
     res = int(labels[ii]) == index
     sub.set_title(str(trainloader.dataset.classes[index]) + ":" + str(res))
+    print(str(trainloader.dataset.classes[index]))
     plt.axis('off')
     plt.imshow(image)
 plt.show()

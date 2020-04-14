@@ -4,10 +4,10 @@ from torchvision import datasets, transforms
 
 
 def load_split_train_test(data_directory, valid_size=.2):
-    train_transforms = transforms.Compose([transforms.Resize(224),
+    train_transforms = transforms.Compose([transforms.Resize([224,224]),
                                            transforms.ToTensor(),
                                            ])
-    test_transforms = transforms.Compose([transforms.Resize(224),
+    test_transforms = transforms.Compose([transforms.Resize([224, 224]),
                                           transforms.ToTensor(),
                                           ])
     train_data = datasets.ImageFolder(data_directory,
